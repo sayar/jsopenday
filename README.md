@@ -1,2 +1,3 @@
-# jsopenday
-Resources from JavaScript Open Day in Vancouver
+# JS Open Day
+
+This repository contains resources from JavaScript Open Day in Vancouver.
