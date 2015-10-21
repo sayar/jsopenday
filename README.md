@@ -23,9 +23,9 @@ JavaScript Open Day is a full day conference about the future of JavaScript and 
 * [Grant Skinner](http://gskinner.com/) - [@gskinner](https://twitter.com/gskinner)
 
 **Toronto**
-* [Matthew Potter]() - [@askmp](https://twitter.com/askmp)
-* [Christina Truong]() - [@]()
-* [Kate Hudson]() - [@]()
+* [Matthew Potter](https://about.me/askmp) - [@askmp](https://twitter.com/askmp)
+* [Christina Truong](http://christinatruong.com/) - [@christinatruong](https://twitter.com/christinatruong)
+* [Kate Hudson](http://blog.ibangspacebar.com/) - [@k88hudson](https://twitter.com/k88hudson)
 * [Rami Sayar](https://ramisayar.com) - [@ramisayar](https://twitter.com/ramisayar)
 
 **Montreal**
