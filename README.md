@@ -27,6 +27,7 @@ JavaScript Open Day is a full day conference about the future of JavaScript and 
 * [Christina Truong](http://christinatruong.com/) - [@christinatruong](https://twitter.com/christinatruong)
 * [Kate Hudson](http://blog.ibangspacebar.com/) - [@k88hudson](https://twitter.com/k88hudson)
 * [Rami Sayar](https://ramisayar.com) - [@ramisayar](https://twitter.com/ramisayar)
+* [Ahmad Nassri](https://www.ahmadnassri.com/) - [@AhmadNassri](https://twitter.com/AhmadNassri)
 
 **Montreal**
 * [David Rousset](http://blogs.msdn.com/b/davrous/) - [@davrous](https://twitter.com/davrous)
