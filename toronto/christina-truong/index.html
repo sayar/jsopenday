@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript Open Day Toronto | Christina Truong</title>
+
+<meta name="description" content="">
+<meta name="author" content="Christina Truong">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<!-- <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'> -->
+<link href='https://fonts.googleapis.com/css?family=Lato:400italic,400|Sacramento' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/custom.css" id="theme">
+<!-- <link rel="stylesheet" href="css/theme/sky.css" id="theme"> -->
+
+<!-- Code syntax highlighting -->
+<!-- <link rel="stylesheet" href="lib/css/color-brewer.css"> -->
+
+<!-- Printing and PDF exports -->
+<script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+<base target="_blank">
+</head>
+
+<body>
+<div class="reveal">
+  <div class="slides">
+  <!-- 
+  11:00 - 11:45 am
+
+  Christina Truong
+
+  Navigating through JavaScript
+
+  As a recovering JavaScript hater, working as a web developer and teaching web development has taught me to embrace it a lot more over the years. This talk will include tips I've learned along the way and cover techniques and best practices for learning, writing and teaching JavaScript. -->
+            
+<section class="title" data-background="#016AC6" data-markdown>
+  <script type="text/template">
+  #Navigating<br> Through JavaScript
+  ####JavaScript Open Day Toronto - November 17th, 2015
+    
+  ##[Christina Truong](http://christinatruong.com)
+  ###[@christinatruong](http://twitter.com/christinatruong)
+  </script>
+</section>
+
+<section data-markdown data-background="#F0F1EB">
+  <script type="text/template">
+  #HTML <span class="fragment accent">&check;</span>
+  #CSS <span class="fragment accent">&check;</span>
+  #JavaScript
+  </script>
+</section>
+
+<section data-background="img/beyonce-yeah.gif" class="beyonce">
+</section>
+
+<section data-markdown data-background="#F0F1EB">
+  <script type="text/template">
+  
+  #I <span class="carat">^</span> <span class="used-to">used to</span> hate JavaScript
+  </script>
+</section>
+
+<section data-markdown data-background="#222">
+  <script type="text/template">
+  #Hello jQuery!
+  </script>
+</section>
+
+<section data-markdown data-background="">
+  <script type="text/template">
+  #Learn by doing
+  (Also, jQuery does not replace JavaScript, it *is* JavaScript.)
+  </script>
+</section>
+
+<section data-markdown data-background="#222">
+  <script type="text/template">
+  #Tips for Writing JavaScript / jQuery
+  </script>
+</section>
+
+<section class="tips" data-background="">
+  <h1>Use a fallback</h1>
+  <p>Link to the CDN first, then add a fallback to the local file.</p>
+<pre><code>&lt;script src=&quot;//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;window.jQuery || document.write('&lt;script src=&quot;js/jquery-2.0.0.min.js&quot;&gt;\x3C/script&gt;')&lt;/script&gt;</code></pre>
+
+  <hr>
+  <p><strong>Source:</strong> <a href="http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx">CDNs fail, but your scripts don't have to - Scott Hanselman</a></p>
+</section>
+
+<section class="tips" data-markdown data-background="">
+  <script type="text/template">
+  #Naming conventions
+  
+  Use functional names when creating variables, class or id names.
+  
+  <div class="fragment" markdown="1">
+  `redButton`  
+  `alertButton` <span class="fragment accent">&check;</span>
+  </div>
+  </script>
+</section>
+
+<section class="tips" data-markdown data-background="">
+  <script type="text/template">
+  #Naming conventions
+    
+  Go with straightforward versus clever. <!-- .element: class="fragment" -->
+  
+  <div class="fragment" markdown="1">
+  `switcheroo`  
+  `bannerSwitch` <span class="fragment accent">&check;</span>
+  </div>  
+  </script>
+</section>
+
+<section class="tips" data-markdown data-background="">
+  <script type="text/template">
+  #Separate JavaScript from CSS
+  
+  option 1 - use ids for JS and classes for css
+  
+```html
+<nav id="nav-global" class="nav-global">
+```
+  
+  option 2 - use a prefix for JS
+  
+```html
+<nav class="js-nav-global nav-global">
+```
+  
+  option 3 - use a data attribute
+  
+```html
+<nav class="nav-global" data-nav-global>
+```
+  </script>
+</section>
+
+<section data-markdown data-background="#222">
+  <script type="text/template">
+  #Performance <br>& Optimization
+  </script>
+</section>
+<section class="tips performance" data-markdown data-background="">
+  <script type="text/template">
+  Different *types* of selectors affect performance.
+  
+```
+$("#id") // fastest
+$(".class")
+$("[data-attribute]")
+$("[data-attribute='value']") // slowest
+```
+
+  <!-- ![](img/performance-selectors.jpg) -->
+  <img class="js-perf" src="img/performance-selectors.jpg" alt="">
+  
+  ---
+  **Source:** <http://jsperf.com/jquery-selectors-class-vs-data-attribute-vs-id>
+
+  </script>
+</section>
+
+<section data-markdown data-background="">
+  <script type="text/template">
+  Performance & Browsers
+  
+  <img class="js-perf" src="img/performance-browsers.jpg" alt="jsper.com example">
+    
+  ---
+  **Source:** <http://jsperf.com/jquery-selectors-class-vs-data-attribute-vs-id>
+  </script>
+</section>
+<section class="tips" data-markdown data-background="">
+  <script type="text/template">  
+  Cache selectors to avoid repetition.
+
+```javascript
+var modal = $("#modal");
+modal.fadeIn();
+modal.fadeOut();
+modal.hide();
+```
+      
+  Can also using the `$` symbol as a naming convention to indicate that it's a jQuery object.
+
+```javascript
+var $modal = $("#modal");
+$modal.fadeIn();
+```      
+  </script>
+</section>
+
+<section data-markdown data-background="">
+  <script type="text/template">
+Simplify selectors as often as you can.
+
+```javascript   
+$(".wrapper div#modal")
+$("#modal") // better
+```
+
+Use `find()` & a cached selector instead of a descendant selector.
+
+```javascript
+$("#modal a")
+```
+```javascript
+// better
+var $modal = $("#modal");
+$modal.find("a")
+```
+  </script>
+</section>
+
+<section data-markdown data-background="#222">
+  <script type="text/template">
+  #Tips for Learning JavaScript
+  </script>
+</section>
+
+<section class="full-img-bg" data-markdown data-background="img/blonde-boy.jpg">
+  <script type="text/template">
+  #Don't panic
+  
+  (or try not to panic)
+  </script>
+</section>
+
+<section class="large-text" data-markdown data-background="">
+  <script type="text/template">
+  Get it to *work* first.  
+  Then get it to work *better*.  
+  </script>
+</section>
+
+<section class="large-text" data-markdown data-background="">
+  <script type="text/template">
+  Devise a plan of action *without* JS first and make a list of instructions. 
+  
+  Then find the JS equivalent for each step.
+  </script>
+</section>
+
+<section class="nav-example" data-markdown data-background="">
+  <script type="text/template">
+  For example, to create an effect like this:
+  
+  ![](img/active-nav.gif)
+  
+  The required steps would be:
+  
+  1. Click on navigation link
+  1. Change the background color of the selected link
+  1. Click on another link
+  1. Change the background color of the current selected link
+  1. Remove the background color of the previously selected link
+  </script>
+</section>
+
+<section class="tips large-text" data-markdown data-background="#F0F1EB">
+  <script type="text/template">
+
+  Celebrate the wins, no matter how small.
+  
+  <p class="fragment"><code>console.log()</code> is your best friend.</p>
+  
+  Give yourself a break.<!-- .element: class="fragment" -->
+  
+  Teach!<!-- .element: class="fragment" -->
+
+  </script>
+</section>
+
+<section class="teaching" data-markdown data-background="img/llc-javascript-workshop.jpg">
+  <script type="text/template">
+  #Learn by teaching
+
+  ---
+  **source:** <http://ladieslearningcode.com/tale-of-a-mentor-ruhee-on-rails/>
+
+  </script>
+</section>
+
+<section data-markdown data-background="#F0F1EB">
+  <script type="text/template">
+  #Speaking of Teaching...
+    
+  </script>
+</section>
+
+<section data-markdown data-background="img/nope.gif">
+  <script type="text/template">
+  </script>
+</section>
+
+<section data-markdown data-background="#222">
+  #Tips for teaching JavaScript
+  
+  (or mentoring, helping, collaborating, answering questions...)
+
+</section>
+        
+<section class="tips large-text" data-markdown>
+  <script type="text/template">  
+  Encourage students to learn at least the JavaScript basics first before jumping into libraries.
+  
+  * practice writing and recognizing syntax patterns
+  * leave lots of comments, on every line if you must
+  * get to know basic concepts (variables, functions, objects, arrays, loops, control statements)
+  
+  </script>
+</section>
+
+<section class="tips large-text" data-markdown data-background="">
+  <script type="text/template">
+  Show students how to be resourceful and how to find answers.
+
+  * where to find documentation and *how* to read it
+  * how to do a directed web search
+    * asking a question + language yields better results
+    * "how to hide an element on click JavaScript"
+  * encourage experimentation
+  
+  </script>
+</section>
+
+<section class="large-text" data-markdown data-background="#222">
+  <script type="text/template">
+  #Culture & Teaching
+
+  Attracting people into tech careers is great but reinforcing the existing culture in the educational environments may cause those new faces to leave before they even finish.
+  
+  </script>
+</section>
+
+<section class="foo-bar-tweet" data-background="">
+  <!-- <script type="text/template"> -->
+  <!-- <h1>Language</h1> -->
+  
+  <p>Use examples that are relatable and try not to assume knowledge of something that isn't explained.</p>
+  
+  <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Presented without comment <a href="https://t.co/gJLUrd0SWa">https://t.co/gJLUrd0SWa</a></p>&mdash; Christina Truong (@christinatruong) <a href="https://twitter.com/christinatruong/status/633718602659708929">August 18, 2015</a></blockquote>
+  <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+  <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/christinatruong">@christinatruong</a> foo and bar are silly and confusing for beginners, and embody what I hate about nerd culture.</p>&mdash; Ash Furrow (@ashfurrow) <a href="https://twitter.com/ashfurrow/status/633729605132787712">August 18, 2015</a></blockquote>
+  <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <!-- </script> -->
+</section>
+
+<section data-markdown data-background="">
+  <script type="text/template">
+  ##Teaching is personal
+  
+  Be mindful of the type of language being used. Even in lighthearted conversations; making jokes or using examples that are culturally insensitive or just not relatable to different people may decrease understanding and engagement.
+  
+  This can lead to students feeling isolated or less compelled to interact with others.
+
+  </script>
+</section>
+
+<section data-markdown data-background="">
+  <script type="text/template">
+  ##Be supportive without coddling
+  
+  Give constructive feedback.
+  
+  Defaulting to Imposter Syndrome as a catch-all explanation for any feelings of uncertainty is not accurate. It is not the same thing as just not knowing how to do something yet.
+  
+  Help to *build* confidence, not just inflate it.
+
+  </script>
+</section>
+
+<section class="fake-it" data-markdown data-background="" data-transition="none">
+  <script type="text/template"> 
+  
+  ##Fake it til you make it
+  
+  Instead, help identifying what their interests are, strengths *and* weaknesses.
+  
+  Help set realistic goals that suit *them*, not what the industry tells them to be (or even what you want them to be).
+    
+  </script>
+</section>
+
+<section data-markdown data-background="" data-transition="none">
+  <script type="text/template"> 
+  
+  ##Fake it til you make it <!-- .element: class="strikethrough" --> 
+  
+  <div class="fragment">
+  <p>Instead, help identifying what their interests are, strengths *and* weaknesses.</p>
+  
+  <p>Help set realistic goals that suit *them*, not what the industry tells them to be (or even what you want them to be).</p>
+  </div>
+
+  </script>
+</section>
+
+<section class="large-text" data-markdown data-background="">
+  <script type="text/template">
+  Whether you're new to the industry or experienced, teaching or mentoring...
+  
+  Keep learning, keep experimenting and keep sharing your knowledge.
+  
+  </script>
+</section>
+
+<section data-markdown data-background="#222">
+  <script type="text/template">
+  #Thank you!!!
+  
+  Questions?
+  <aside class="notes" data-markdown>
+  </aside>
+  </script>
+</section>
+</div><!-- slides -->
+
+<footer data-markdown>
+  JavaScript Open Day Toronto | [@christinatruong](http://twitter.com/christinatruong)
+</footer>
+</div><!-- reveal -->
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+  // Full list of configuration options available at:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    width: 1200,
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    // touch: true,
+    // hideAddressBar: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    // Optional reveal.js plugins
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true },
+      { src: 'plugin/notes/notes.js', async: true }
+    ]
+  });
+</script>
+</body>
+</html>
+
+
+
+
