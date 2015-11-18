@@ -8,6 +8,6 @@ Christina Truong
 <http://christinatruong.com>  
 <http://twitter.com/christinatruong>
 
-To view the presentation, open index.html in the browser.
+To view the presentation, open **index.html** or view it at <http://christinatruong.com/talks/javascript-open-day/>
 
 Created with reveal.js: <https://github.com/hakimel/reveal.js/>
