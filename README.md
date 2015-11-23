@@ -30,9 +30,9 @@ JavaScript Open Day is a full day conference about the future of JavaScript and 
 * [Ahmad Nassri](https://www.ahmadnassri.com/) - [@AhmadNassri](https://twitter.com/AhmadNassri)
 
 **Montreal**
-* [David Rousset](http://blogs.msdn.com/b/davrous/) - [@davrous](https://twitter.com/davrous)
 * [Fred Harper](http://outofcomfortzone.net/) - [@fharper](https://twitter.com/fharper)
 * Carla Morawicz - [@carlamorawicz](https://twitter.com/carlamorawicz)
 * [Marek Zaluski](http://www.marekzaluski.com/) - [@marekweb](https://twitter.com/marekweb)
 * [Rami Sayar](https://ramisayar.com) - [@ramisayar](https://twitter.com/ramisayar)
 * [Nicolas Krutchken](http://nicolas.kruchten.com/) - [@nicolaskruchten](https://twitter.com/nicolaskruchten)
+* [Laurent Duveau](http://www.ldex.ca/) - [@laurentduveau](https://twitter.com/LaurentDuveau)
