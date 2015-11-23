@@ -1,4 +1,4 @@
-# JS Open Day
+# JavaScript Open Day
 
 JavaScript Open Day is a full day conference about the future of JavaScript and the Web presented by Microsoft Edge and Lighthouse Labs. World-class speakers from the Canadian Web Community will speak about all aspects of full-stack JavaScript development. This repository contains the presentations and talks from JavaScript Open Day in Vancouver, Calgary, Toronto and Montreal.
 
