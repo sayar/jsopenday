@@ -7,7 +7,7 @@ JavaScript Open Day is a full day conference about the future of JavaScript and 
 **Vancouver**
 * [Steve Fisher](http://hellofisher.com/) - [@hellofisher](https://twitter.com/hellofisher)
 * [Tiffany Tse](http://tiffanytse.ca/) - [@tiffany_tse](https://twitter.com/tiffany_tse)
-* [Fred Harper](http://outofcomfortzone.net/) - [@fharper](https://twitter.com/fharper)
+* [Frédéric Harper](http://outofcomfortzone.net/) - [@fharper](https://twitter.com/fharper)
 * [Morten Rand-Henriksen](http://mor10.com/) - [@mor10](https://twitter.com/mor10)
 * [Rami Sayar](https://ramisayar.com) - [@ramisayar](https://twitter.com/ramisayar)
 * [Pearl Chen](https://medium.com/@pearlchen) - [@pearlchen](https://twitter.com/PearlChen)
@@ -30,7 +30,7 @@ JavaScript Open Day is a full day conference about the future of JavaScript and 
 * [Ahmad Nassri](https://www.ahmadnassri.com/) - [@AhmadNassri](https://twitter.com/AhmadNassri)
 
 **Montreal**
-* [Fred Harper](http://outofcomfortzone.net/) - [@fharper](https://twitter.com/fharper)
+* [Frédéric Harper](http://outofcomfortzone.net/) - [@fharper](https://twitter.com/fharper)
 * Carla Morawicz - [@carlamorawicz](https://twitter.com/carlamorawicz)
 * [Marek Zaluski](http://www.marekzaluski.com/) - [@marekweb](https://twitter.com/marekweb)
 * [Rami Sayar](https://ramisayar.com) - [@ramisayar](https://twitter.com/ramisayar)
